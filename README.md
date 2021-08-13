@@ -8,15 +8,17 @@ I The backend was built with Django and the frontend was built with React. I use
 ## Getting Started
 
 ### Installing
-Frontend -> cd into frontend directory Run npm install
+Frontend -> Run npm install to install all dependencies
 
-Backend -> cd into to-project directory run pip install pipenv -> pipenv shell -> ip install -r requirements.txt -> pip freeze > requirement.txt
+Backend -> In root directory run pip install pipenv -> pipenv shell -> pipenv install django ->  pip install -r requirements.txt -> pip freeze > requirement.txt -> python manage.py migrate 
 
 
 ### Executing program
-Backend -> cd into to-project directory and run python manage.py runserver to spin up dev server on port 8000
+Frontend. cd into /frontend then run npm start to start up dev server on port 3000
 
-Frontend. cd into /frontend npm install then run npm start to start up dev server on port 3000
+Backend -> In root directory python manage.py runserver to spin up dev server on port 8000
+
+
 ```
 
 
