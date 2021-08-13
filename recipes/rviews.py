@@ -8,7 +8,7 @@ from .serializers import *
 from django.http import JsonResponse
 import json
 
-
+# grabbing all recipes from database
 @api_view(['GET', 'POST'])
 def recipe_list(request):
     if request.method == 'GET':
@@ -17,7 +17,7 @@ def recipe_list(request):
         recipe_serializer = RecipeSerializer(data, context={'request': request}, many=True)
 
         return Response(recipe_serializer.data)
-
+# adding the recipe JSON object to databse
     elif request.method == 'POST':
         recipe_serializer = RecipeSerializer(data=request.data)
         if recipe_serializer.is_valid():

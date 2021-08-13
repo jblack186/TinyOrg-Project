@@ -8,6 +8,7 @@ from .serializers import *
 from django.http import JsonResponse
 import json
 
+# grabbing all customers in database
 @api_view(['GET', 'POST'])
 def customers_list(request):
     if request.method == 'GET':
@@ -16,7 +17,7 @@ def customers_list(request):
         serializer = CustomersSerializer(data, context={'request': request}, many=True)
 
         return Response(serializer.data)
-
+# checking if customer data is valid and if so they will be saved to the database
     elif request.method == 'POST':
         serializer = CustomersSerializer(data=request.data)
         if serializer.is_valid():
@@ -25,6 +26,7 @@ def customers_list(request):
             
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# additional apis for additional features
 @api_view(['PUT', 'DELETE'])
 def customers_detail(request, pk):
     try:

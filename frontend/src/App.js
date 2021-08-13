@@ -18,6 +18,7 @@ function App() {
   const [allergenList, setAllergenList] = useState([]);
 
   const history = useHistory();
+// a bunch of ways to slice an apple. This function is looping through the response data from the JSON object of the given api and in each instance an option element with the value of the name of the instance will be placed in state -> AllergnList. I'm using the spread operator to keep the state immutable. The first parameter grabs everything within the array then outputs a new array with whatever was added to the second parameter
 
   const getAllergies = () => {
     axios
@@ -67,7 +68,7 @@ function App() {
         console.log(err);
       });
   };
-
+// this will be passed as a prop through RecipeForm
   const newCustomerForm = (
     <form className="form__content__form" onSubmit={handleSubmit}>
       <label>
@@ -139,7 +140,6 @@ function App() {
     </form>
   );
 
-  // checking selected allergens on filter
 
   return (
     <div className="container">
