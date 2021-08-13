@@ -20,10 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j*(l6@h(*(&8i@yh%=sn@#7upk29-ja50cf*2@-q86zo!ft_e%'
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = 'django-insecure-j*(l6@h(*(&8i@yh%=sn@#7upk29-ja50cf*2@-q86zo!ft_e%'   
+
+# REMINDER to eventually store this in .env
+
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'tinyo-challenge-backend.herokuapp.com']
 
@@ -86,6 +87,7 @@ DATABASES = {
     }
 }
 
+# REMINDER to move DB over to postgress. No baby DB!
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
