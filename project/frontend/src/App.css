@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  color: #6B5C54;
+  font-size: 16px;
+  font-family: 'supria-sans', Helvetica, Arial, sans-serif;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  background-color: #fffcf2;
+  -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
+}
+/*# sourceMappingURL=App.css.map */

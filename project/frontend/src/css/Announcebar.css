@@ -1,0 +1,22 @@
+.announcebar-contatiner {
+  width: 100%;
+  max-height: 38px;
+  text-align: center;
+  background-color: #204041;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.announcebar-contatiner__body {
+  color: white;
+}
+/*# sourceMappingURL=Announcebar.css.map */

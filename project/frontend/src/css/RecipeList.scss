@@ -1,0 +1,111 @@
+.list {
+  width: 75%;
+  min-height: 70vh;
+  background: white;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+
+
+    &__allergies {
+      width: 220px;
+      border-radius: 8px;
+      min-height: 250px;
+      
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 20px 0 20px 0;
+      
+      position: relative;
+
+      &__img {
+        width: 25px;
+        height: 25px;
+        background-color: rgba(204, 255, 255, 0.4);
+        padding: 10px;
+        border-radius: 100px;
+
+        &--ribbon {
+          background-color: unset;
+          height: 100%;
+          width: 200px;
+          padding: 0px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 0px;
+          transform: rotate(180deg);
+          z-index: 1;
+
+        }
+        
+        &--danger {
+          width: 20px;
+          background: none;
+        }
+
+      }
+      &__heading {
+        font-size: 1.2rem;
+        text-align: center;
+        height: 24px;
+      }
+
+      &__body {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 113px;
+        padding: 1px;
+        z-index: 9;
+
+        p {
+          margin: 0;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+
+      &__button {
+        width: 85%;
+        height: 45px;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 9;
+        background: #343a40;
+      }
+
+      
+
+    }
+
+    &__allergies:nth-child(odd) {
+      background: #6f42c1;
+    }
+    &__allergies:nth-child(even) {
+      background: #f7aa1d;
+    }
+
+  }
+}
+

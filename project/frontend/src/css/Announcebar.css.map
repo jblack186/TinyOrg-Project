@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAKtB;;AAHE,AAAD,6BAAO,CAAC;EACN,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "Announcebar.scss"
+    ],
+    "names": [],
+    "file": "Announcebar.css"
+}

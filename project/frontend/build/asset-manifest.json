@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ac142e7.chunk.css",
+    "main.js": "/static/js/main.9215bc1b.chunk.js",
+    "main.js.map": "/static/js/main.9215bc1b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.976efdef.js",
+    "runtime-main.js.map": "/static/js/runtime-main.976efdef.js.map",
+    "static/js/2.5a00a675.chunk.js": "/static/js/2.5a00a675.chunk.js",
+    "static/js/2.5a00a675.chunk.js.map": "/static/js/2.5a00a675.chunk.js.map",
+    "static/js/3.373777fb.chunk.js": "/static/js/3.373777fb.chunk.js",
+    "static/js/3.373777fb.chunk.js.map": "/static/js/3.373777fb.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4ac142e7.chunk.css.map": "/static/css/main.4ac142e7.chunk.css.map",
+    "static/js/2.5a00a675.chunk.js.LICENSE.txt": "/static/js/2.5a00a675.chunk.js.LICENSE.txt",
+    "static/media/baby-boy.e1fcee2c.svg": "/static/media/baby-boy.e1fcee2c.svg",
+    "static/media/baby-eating.03a4839f.jpeg": "/static/media/baby-eating.03a4839f.jpeg",
+    "static/media/danger.e8fbabf9.svg": "/static/media/danger.e8fbabf9.svg",
+    "static/media/ribbon-for-an-angle.25b21168.svg": "/static/media/ribbon-for-an-angle.25b21168.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.976efdef.js",
+    "static/js/2.5a00a675.chunk.js",
+    "static/css/main.4ac142e7.chunk.css",
+    "static/js/main.9215bc1b.chunk.js"
+  ]
+}

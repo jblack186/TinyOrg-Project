@@ -1,0 +1,17 @@
+.header {
+  height: 35px;
+  padding: 16px 30px 10px;
+  background: #faf6f0;
+  background-color: #faf6f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  width: 100px;
+}
+/*# sourceMappingURL=Header.css.map */

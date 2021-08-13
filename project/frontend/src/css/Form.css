@@ -1,0 +1,82 @@
+.form {
+  background: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.form__image {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form__content {
+  line-height: 1.5;
+  border: 1px solid #ECECEB;
+  border-radius: 2px;
+  color: #6B5C54;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__content__heading {
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.form__content__body {
+  width: 70%;
+  text-align: center;
+}
+
+.form__content__form input {
+  width: 100%;
+  height: 22px;
+  margin-bottom: 15px;
+}
+
+.form__content__form input, .form__content__form label {
+  display: block;
+}
+
+.form__content button {
+  display: block;
+  margin: 20px 0 31px 0px;
+  min-width: 280px;
+  border-radius: 25px;
+  background: #204041;
+  color: white;
+  border: none;
+  height: 3rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .form {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .form__image {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Form.css.map */
