@@ -4,8 +4,11 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Announcebar from "./components/Announcebar";
 import RecipeForm from "./components/RecipeForm";
+import Compare from "./Pages/Compare";
 import RecipeList from "./components/RecipeList";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import BrandItem from "./components/BrandItem";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -16,9 +19,10 @@ function App() {
   const [childLastName, setChildLastName] = useState("");
   const [allergies, setAllergies] = useState([]);
   const [allergenList, setAllergenList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [tempAllergies, setTempAllergies] = useState(["milk"]);
 
   const history = useHistory();
-// a bunch of ways to slice an apple. This function is looping through the response data from the JSON object of the given api and in each instance an option element with the value of the name of the instance will be placed in state -> AllergnList. I'm using the spread operator to keep the state immutable. The first parameter grabs everything within the array then outputs a new array with whatever was added to the second parameter
 
   const getAllergies = () => {
     axios
@@ -44,6 +48,16 @@ function App() {
         setRecipes(res.data);
       });
   };
+  const sendRecipes = () => {
+    axios
+      .post("/api/recipes-list/", { recipes: recipes })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     getRecipes();
@@ -51,6 +65,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    // sendRecipes();
     let newCustomer = {
       first_name: firstName,
       last_name: lastName,
@@ -68,7 +83,7 @@ function App() {
         console.log(err);
       });
   };
-// this will be passed as a prop through RecipeForm
+
   const newCustomerForm = (
     <form className="form__content__form" onSubmit={handleSubmit}>
       <label>
@@ -140,6 +155,7 @@ function App() {
     </form>
   );
 
+  // checking selected allergens on filter
 
   return (
     <div className="container">
@@ -171,6 +187,13 @@ function App() {
         path="/recipes"
         render={(props) => {
           return <RecipeList recipes={recipes} allergies={allergies} />;
+        }}
+      />
+            <Route
+        exact
+        path="/compare"
+        render={(props) => {
+          return <Compare recipes={recipes} allergies={allergies} />;
         }}
       />
     </div>

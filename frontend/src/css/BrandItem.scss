@@ -1,0 +1,53 @@
+.brand-item {
+  max-width: 250px;
+  min-width: 250px;
+  min-height: 230px;
+  background: whte;
+    position: relative;
+  border: .2px solid whitesmoke;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  border-radius: 20px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+
+    button {
+      background: rgb(32, 64, 65);
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+    }
+
+  &__img {
+    width: 180px;
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    margin-left: -90px;
+
+
+  }
+
+  &__heading {
+    max-width: 300px;
+    text-align: center
+
+  }
+}
+}
+
+.brand-item:hover {
+  
+}

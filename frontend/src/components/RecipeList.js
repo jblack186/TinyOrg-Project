@@ -8,8 +8,8 @@ import Ribbon from "../img/ribbon-for-an-angle.svg";
 const RecipeList = (props) => {
   const [recipes, setRecipes] = useState([]);
   const [allergies, setAllergies] = useState(props.allergies);
+  const [loading, setLoading] = useState(true);
 
-  // The parameter that is being passed through this function are the chosen allergies that was selected in the homepage form. Only allergies that were not selected will be returned in then rendered below inside the JSX.
   function checkAllergy(allRecipes) {
     const safeRecipes = allRecipes.filter(
       (recipe) =>
@@ -23,12 +23,15 @@ const RecipeList = (props) => {
       .get("/api/recipes-list/")
       .then((res) => {
         let safeRecipes = checkAllergy(props.recipes);
+        console.log("safe", safeRecipes);
         setRecipes(safeRecipes);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [props]);
+  console.log("recipes", recipes);
+  console.log("allergies", allergies);
 
   return (
     <div className="list">
