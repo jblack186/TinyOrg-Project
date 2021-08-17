@@ -9,6 +9,7 @@ import RecipeList from "./components/RecipeList";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import BrandItem from "./components/BrandItem";
+import Modal from "./components/Modal";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -196,6 +197,15 @@ function App() {
           return <Compare recipes={recipes} allergies={allergies} />;
         }}
       />
+
+<Route
+        exact
+        path="/modal"
+        render={(props) => {
+          return <Modal recipes={recipes} allergies={allergies} />;
+        }}
+      />
+
     </div>
   );
 }

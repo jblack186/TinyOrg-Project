@@ -12,3 +12,7 @@ class Customers(models.Model):
     def __str__(self):
         return self.first_name
 
+class Products(modesl.Model):
+    customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
+    purchases = models.ManyToManyField()
+

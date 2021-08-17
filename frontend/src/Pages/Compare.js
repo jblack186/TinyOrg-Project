@@ -41,7 +41,7 @@ const Compare = () => {
         </p>
       </section>
       <section className="compare__buttons">
-        <button onClick={babyBrand} value="Gerber">
+        <button onClick={babyBrand} value="Gerber toddler">
           Gerber
         </button>
         <button onClick={babyBrand} value="Beech Nut Baby Food">

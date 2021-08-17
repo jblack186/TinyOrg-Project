@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import '../css/Modal.scss';
 import axios from "axios";
-import mockData from "../brandJSON";
 
 function Modal(props) {
   const [sodium, setSodium] = useState()
@@ -45,11 +44,19 @@ console.log(sodium)
   return (
     <div className="modal-container">
       <div className="modal">
-      <h2>{props.name}</h2>
-      <p>Sodium: {sodium && sodium.amount}</p>
-      <p>Sugar: {sugar && sugar.amount}</p>
-
-      <p></p>
+        <div className="modal__content">
+      <h3>{props.name}Gerber 2nd Foods Organic Baby Food Pear Spinach</h3>
+      <div>
+      <h4>Sodium: {sodium && sodium.amount}</h4>
+            {sodium ? sodium.amount < 20 ? <p style={{color: 'green', fontWeight: 'bolder'}}>Low</p> : sodium.amount > 20 && sodium.amount < 40 ? <p style={{color: 'orange', fontWeight: 'bolder'}}>Moderately high</p> : <p style={{color: 'red', fontWeight: 'bolder'}}>High</p> : null}
+            </div>
+            <div>
+      <h4>Sugar: {sugar && sugar.amount}</h4>
+      {sugar ? sugar.amount < 5 ? <p style={{color: 'green', fontWeight: 'bolder'}}>Low</p> : sugar.amount > 10 && sugar.amount < 15 ? <p style={{color: 'orange', fontWeight: 'bolder'}}>Moderately high</p> : <p style={{color: 'red', fontWeight: 'bolder'}}>High</p> : null}
+      </div>
+      <p>Is this a product you purchase for your little one?</p>
+      <button className="modal__content__button modal__content__button--no">No</button><button className="modal__content__button modal__content__button--yes">Yes</button>
+      </div>
       </div>
     </div>
   )
