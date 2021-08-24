@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "",
+  "proxy": "http://localhost:8000/",
   "dependencies": {
     "@progress/kendo-react-form": "^4.8.0",
     "@testing-library/jest-dom": "^5.11.4",

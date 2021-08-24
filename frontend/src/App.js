@@ -7,8 +7,6 @@ import RecipeForm from "./components/RecipeForm";
 import Compare from "./Pages/Compare";
 import RecipeList from "./components/RecipeList";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import BrandItem from "./components/BrandItem";
 import Modal from "./components/Modal";
 
 function App() {
@@ -66,7 +64,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // sendRecipes();
+    sendRecipes();
     let newCustomer = {
       first_name: firstName,
       last_name: lastName,

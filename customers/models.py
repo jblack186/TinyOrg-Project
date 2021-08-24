@@ -13,8 +13,12 @@ class Customers(models.Model):
         return self.first_name
 
 class Products(models.Model):
-    customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
-    purchases = models.CharField("Purchases", max_length=240)
+    customer = models.ForeignKey(Customers, verbose_name="products", default=1, on_delete=models.SET_DEFAULT)
+    name = models.CharField(max_length=300)
+    product_id = models.CharField(max_length=20)
+    sodium_level = models.CharField(max_length=20)
+    sugar_level = models.CharField(max_length=20)
+    date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.purchases
+        return self.name
