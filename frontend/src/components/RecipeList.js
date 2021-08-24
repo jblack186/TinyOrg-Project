@@ -8,8 +8,8 @@ import Ribbon from "../img/ribbon-for-an-angle.svg";
 const RecipeList = (props) => {
   const [recipes, setRecipes] = useState([]);
   const [allergies, setAllergies] = useState(props.allergies);
-  const [loading, setLoading] = useState(true);
 
+  // this function's one parameter is for a list of recipes to be passed in as an argument. From there this list will be filtered and through the find method it will check if that instances allergens array has a value that is also in the "allergies" state. If it is not then then it will be return to be rendered in the JSX below through the "recipes" state
   function checkAllergy(allRecipes) {
     const safeRecipes = allRecipes.filter(
       (recipe) =>
@@ -17,7 +17,7 @@ const RecipeList = (props) => {
     );
     return safeRecipes;
   }
-
+// grabbing the recipes from database and passing that list as an argument to the checkAllergy function to filter only recipes that the parent's child is not allergic to
   useEffect(() => {
     axios
       .get("/api/recipes-list/")
@@ -30,8 +30,6 @@ const RecipeList = (props) => {
         console.log(err);
       });
   }, [props]);
-  console.log("recipes", recipes);
-  console.log("allergies", allergies);
 
   return (
     <div className="list">

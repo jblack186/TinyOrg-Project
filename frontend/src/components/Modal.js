@@ -6,7 +6,7 @@ function Modal(props) {
   const [sodium, setSodium] = useState()
   const [sugar, setSugar] = useState()
   const [brandItem, setBrandItem] = useState()
-console.log(props.id)
+  
   useEffect(() => {
     axios.get(`https://api.spoonacular.com/food/products/${props.id}?apiKey=${process.env.REACT_APP_API_KEY}`)
     .then(res => {

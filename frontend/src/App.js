@@ -18,11 +18,10 @@ function App() {
   const [childLastName, setChildLastName] = useState("");
   const [allergies, setAllergies] = useState([]);
   const [allergenList, setAllergenList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [tempAllergies, setTempAllergies] = useState(["milk"]);
 
   const history = useHistory();
 
+  // going to call this in the useEffect hook. The data will be passed into the "selection" dropdown with each instance having a value for the option element
   const getAllergies = () => {
     axios
       .get("https://60f5adf918254c00176dffc8.mockapi.io/api/v1/allergens/")
@@ -36,10 +35,7 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    getAllergies();
-  }, []);
-
+// grabbing all the recipes from the mock api 
   const getRecipes = () => {
     axios
       .get("https://60f5adf918254c00176dffc8.mockapi.io/api/v1/recipes/")
@@ -47,6 +43,8 @@ function App() {
         setRecipes(res.data);
       });
   };
+
+  // function to send the value of "recipes" state to database
   const sendRecipes = () => {
     axios
       .post("/api/recipes-list/", { recipes: recipes })
@@ -60,8 +58,10 @@ function App() {
 
   useEffect(() => {
     getRecipes();
-  }, []);
+    getAllergies();
 
+  }, []);
+// saving customer to database and calling the sendRecipe function to save recipe to database too
   const handleSubmit = async (event) => {
     event.preventDefault();
     sendRecipes();
@@ -82,7 +82,7 @@ function App() {
         console.log(err);
       });
   };
-
+// this form will be passed as props to the RecipeForm component
   const newCustomerForm = (
     <form className="form__content__form" onSubmit={handleSubmit}>
       <label>
@@ -154,7 +154,6 @@ function App() {
     </form>
   );
 
-  // checking selected allergens on filter
 
   return (
     <div className="container">

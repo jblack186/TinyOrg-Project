@@ -3,7 +3,7 @@ import '../css/BrandItem.scss';
 import Eye from '../img/view.svg';
 
 function BrandItem(props) {
-
+// just cutting the recipe name. Some of the strings are coming in a bit too long  
   let text = props.title
   let maxSize = 50
   let sizeString = text

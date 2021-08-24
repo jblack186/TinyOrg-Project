@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../css/Form.scss";
 import Baby from '../img/baby-eating.jpeg';
 
