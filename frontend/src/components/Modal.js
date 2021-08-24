@@ -24,15 +24,6 @@ console.log('res', res)
       setSugar(sugarData)
 
     })
-  // console.log('data', data)
-  // setBrandItem(data);
-
-    
-
-    // const timer = setTimeout(() => {
-
-    //   }, 3000);
-    // return () => clearTimeout(timer);
   }, [])
 
   console.log('brand', brandItem && brandItem.nutrition.nutrients.find(item => item.title === "Sodium" ))

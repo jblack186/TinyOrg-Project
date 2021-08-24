@@ -44,14 +44,14 @@ const Compare = () => {
         <button onClick={babyBrand} value="Gerber toddler">
           Gerber
         </button>
-        <button onClick={babyBrand} value="Beech Nut Baby Food">
-          Beech Nut
+        <button onClick={babyBrand} value="Beech Nut naturals">
+          Beech-Nut
         </button>
         <button onClick={babyBrand} value="Plum baby food">
           Plum
         </button>
-        <button onClick={babyBrand} value="Earths Best Baby Foods">
-          Earth's Best Baby Foods
+        <button onClick={babyBrand} value="Happy Baby">
+          Happy Baby
         </button>
       </section>
       <section className="compare__brand-items">

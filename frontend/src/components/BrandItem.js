@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/BrandItem.scss';
-import Logo from '../img/logo.png';
 import Eye from '../img/view.svg';
 
 function BrandItem(props) {
